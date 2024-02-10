@@ -399,6 +399,7 @@ projectsのためのcss
     text-align: justify;
     word-break: break-all;  
     margin-bottom: 20px;
+    color: #606060;
 }
 .mainVisual-container{
     width: 50%;
@@ -499,7 +500,7 @@ a.btn_01:hover {
         max-width: 100%;
     }
     .outline-caption {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     a.btn_01 {
         z-index: 0;
@@ -560,6 +561,10 @@ a.btn_01:hover {
             word-break: break-all; 
             margin-right: 0;
             text-align: center;
+        }
+        .outline-caption {
+            font-size: 0.9rem;
+            color: #606060;
         }
     }
 
