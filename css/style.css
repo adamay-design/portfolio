@@ -121,6 +121,10 @@ h1,h2,h3,h4{
 /*==================================================
 Index HTMLのためのcss
 ===================================*/
+.index-page-container{
+    margin: 0 auto;
+    width: 960px;
+}
 
 #swiper-container{
     width: 100%;
@@ -145,8 +149,8 @@ Index HTMLのためのcss
 /****** Slide Container **********/
 
 #slideContainer {
-    max-width:900px;
-    margin: 6rem auto;
+    max-width:960px;
+    margin: 6.5rem auto;
     z-index:1;
   }
 
