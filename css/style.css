@@ -630,10 +630,13 @@ a.btn_01:hover {
             width: 70%;
             margin: 0 15% -1%;
             max-width: 100%;
-          }
+        }
           .contents-logo img {
             width: auto;
             height: 30px;
+        }
+        .tag-container{
+            display: none;
         }
         .subtitle{
             width: 90%;
@@ -872,6 +875,11 @@ hr{
     width: 100%;;
     height: auto;
     border: 1px solid #909090;
+}
+@media (max-width: 850px){
+.subtitle-1{
+    font-size: 0.9rem;
+}
 }
 
 /*==================================================
