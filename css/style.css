@@ -784,6 +784,7 @@ hr{
 }
 .bullet{
     list-style: initial;
+    color: #606060;
 }
 .bullet-2{
     list-style: initial;
@@ -798,6 +799,19 @@ hr{
   }
   
 .grid-container img {
+    width: 100%;
+    height: auto;
+    border: 1.5px solid #d8d8d8;
+}
+.grid-container-2{
+    width: 100%;
+	display: flex;
+	justify-content: space-between;
+    gap: 10px;
+    margin-top:20px;
+  }
+  
+.grid-container-2 img {
     width: 100%;
     height: auto;
     border: 1.5px solid #d8d8d8;
