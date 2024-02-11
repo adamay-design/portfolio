@@ -1316,10 +1316,9 @@ header {
     top: 55px;
     position: absolute;
     height: 100dvh;
-    background: #000;
-    background-color: rgba(0, 33, 17, 0.55);
+    background-image: linear-gradient(46deg, rgba(0, 60, 20, 0.60), rgba(0, 64, 90, 0.60));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(20px);
 }
 
 .hamburger-list ul li {
