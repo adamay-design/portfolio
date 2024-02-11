@@ -100,7 +100,7 @@ nav{
 }
 
 .main-menu ul li a:hover::after {
-    width: 100%; /* 変更 */
+    width: 100%;
 }
   
 .fa-instagram{
@@ -1225,8 +1225,8 @@ body{
 header {
     height: 55px;
     display: flex;
-    justify-content: center; /* 横方向中央揃え */
-    align-items: center; /* 縦方向中央揃え */
+    justify-content: center;
+    align-items: center;
 }
 
 .nav{
@@ -1245,24 +1245,24 @@ header {
 }
 
 #hamburger {
-    background-color: transparent;  /*透明の背景*/
-    position: absolute;             /*ハンバーガーの横線の位置を決めるための基準*/
-    cursor: pointer;                /*リンクを示すカーソルを表示（指差しマーク）*/
+    background-color: transparent;
+    position: absolute;  
+    cursor: pointer;  
 	top: 4px;
 	right: 15px;
     height: 39px;
-	width: 39px;                    /*高さと同じ幅*/
+	width: 39px;    
     z-index: 20;
 }
 
 .icon span {
-    position: absolute;       /*親要素である#hamburgerを基準に位置を指定*/
+    position: absolute;
 	top: 21px;
-	right: 10px;               /*#hamburger内の左がら15pxに横線を配置（幅が60pxなので右からも15px）*/
-    width: 20px;              /*横線の幅*/
-    height: 1.5px;              /*横線の高さ*/
-    background-color: #000;  /*横線を白色*/
-    transition: ease 0.5s;   /*変化の時間（easeは初期値）*/
+	right: 10px;
+    width: 20px;
+    height: 1.5px;
+    background-color: #000;
+    transition: ease 0.5s;
 }
 
 .icon span:nth-of-type(1) {
@@ -1284,22 +1284,22 @@ header {
     opacity: 0;
 }
 
-.close span:nth-of-type(3) {
+.close span:nth-of-type(3) {6
 	transform: rotate(-45deg); /*時計回りに45度回転*/
 	top: 23px;
 }
 
 .hamburger-list {
     z-index: 19;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
-    top: 55px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
-    position: absolute; /*絶対配置　top　leftからの位置を絶対配置する*/
+    top: 55px;
+    position: absolute;
     height: 100dvh;
     background: #000;
-    background-color: rgba(42, 86, 120, 0.7); /* ガラスの色と透明度を設定 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果*/
-    backdrop-filter: blur(10px); /* フィルターを使って背後の要素をぼかす効果 */
+    background-color: rgba(0, 33, 17, 0.55);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
 }
 
 .hamburger-list ul li {
