@@ -278,14 +278,14 @@ aboutのためのcss
 .about {
     margin: 130px 0px 0px;
 }
+.page-container{
+    margin: 0 auto;
+    width: 900px;
+}
 .about-container{
     margin: 0 auto;
     width: 650px;
     margin-bottom: 300px;
-}
-.page-container{
-    margin: 0 auto;
-    width: 900px;
 }
 .about-contents{
     width: 100%;
@@ -378,10 +378,14 @@ aboutのためのcss
     .about {
         margin-top: 80px;
     }
+    .about-container{
+        margin: 0 auto;
+        max-width: 380px;
+        width: 90%;
+        margin-bottom: 300px;
+    }
     .about-contents{
     margin: 0 auto;
-    width: 900px;
-    display: flex;
     margin-bottom: 30px;
     }
     .about-card{
@@ -390,15 +394,10 @@ aboutのためのcss
     }
     .about-text1{
         max-width: 380px;
-        width: 90%;
         color: #000;
         font-size: 1.3rem;
         line-height: 1.7;
         text-align: justify;
-    }
-    .about-contents{
-        max-width: 380px;
-        width: 90%;
     }
     .inner-a {
         max-width: 380px;
@@ -1263,9 +1262,9 @@ header {
     align-items: center;
 }
 
-.nav{
+/* .nav{
     height: 55px;
-}
+} */
 
 .logo {
     display: block;
