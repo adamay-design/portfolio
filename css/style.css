@@ -755,13 +755,13 @@ hr{
 .link a{
     color:inherit;
 }
-/* .tag-container{
+.tag-container{
     margin-bottom: 25px;
 }
 .tag{
     font-size:1rem;
     color: #909090;
-} */
+}
 .inner-2{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -884,6 +884,9 @@ hr{
 @media (max-width: 450px){
 .subtitle-1{
     font-size: 0.9rem;
+}
+.url-container{
+    padding-left: 0rem;
 }
 }
 
@@ -1342,9 +1345,8 @@ header {
     top: 55px;
     position: absolute;
     height: 100dvh;
-    background-image: linear-gradient(46deg, rgba(0, 60, 20, 0.60), rgba(0, 64, 90, 0.60));
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(18px);
+    background-image: linear-gradient(46deg, rgba(0, 60, 20, 0.9), rgba(0, 64, 90, 0.9));
 }
 
 .hamburger-list ul li {
@@ -1384,14 +1386,14 @@ ul {
 }
 
 .wrapper{
-    position: relative;/*←相対位置*/
+    position: relative;
     margin-top: 100px;
-    padding-bottom: 80px;/*←footerの高さ*/
+    padding-bottom: 80px;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 1); /* ガラスの色と透明度を設定 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果を追加 */
-    backdrop-filter: blur(5px); /* フィルターを使って背後の要素をぼかす効果を追加 */
-    border: 1 solid rgba(255, 255, 255, 0.8); /* ガラスの境界線を追加 */
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border: 1 solid rgba(255, 255, 255, 0.8);
 }
 
 .wrapper footer {
