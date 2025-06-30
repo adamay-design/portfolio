@@ -33,7 +33,7 @@ body{
 	margin: 0;
     min-width:960px;
 	background:#ffffff;
-	font-size:15px;
+	font-size:1rem;
     font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
 }
 
@@ -128,6 +128,8 @@ h1,h2,h3,h4{
 }
 
 h3{
+    font-weight: bold;
+    font-size: 1rem;
     margin-bottom: 5px;
 }
 
@@ -299,17 +301,31 @@ aboutのためのcss
 ===================================*/
 
 .about {
-    margin: 130px 0px 0px;
+    margin: 100px 0px 0px;
 }
+
+.about-main-visual {
+    width: 100%; /* 親要素 (about-contents) と同じ幅にする */
+    margin-bottom: 40px; /* 必要に応じて、画像の下にマージンを追加 */
+}
+
+.about-main-visual img {
+    width: 100%; /* 画像自身をラッパーの100%にする */
+    height: auto; /* 縦横比を維持 */
+    display: block; /* 余分なスペースを防ぐ */
+    border: 1.5px solid #d8d8d8; /* main-visual img からボーダーを継承 */
+}
+
 .page-container{
     margin: 0 auto;
-    width: 900px;
+    width: 800px;
 }
 .about-container{
     margin: 0 auto;
     width: 650px;
     margin-bottom: 300px;
 }
+
 .about-contents{
     width: 100%;
     height: auto;
@@ -321,6 +337,9 @@ aboutのためのcss
 .main-visual img{
         border: 1.5px solid #d8d8d8;
         width: 100%;
+}
+.caption{
+    margin-bottom: 100px;
 }
 .name{
     margin-bottom: 10px;
@@ -343,7 +362,7 @@ aboutのためのcss
     margin-bottom: 40px;
 }
 .production-time{
-    font-size:0.8rem;
+    font-size:1rem;
     margin-bottom: 5px;
     color: #606060;
 }
@@ -356,7 +375,9 @@ aboutのためのcss
     word-break: break-all;  
     margin-bottom: 30px;
 }
-
+.about-text2 strong {
+    font-weight: bold;
+}
 .about-text1{
     margin: 0 auto;
     width: 900px;
@@ -506,11 +527,11 @@ projectsのためのcss
     margin-bottom: 20px;
     color: #606060;
 }
-.mainVisual-container{
+.project-header-visual-container{
     width: 50%;
     height: auto;
 }
-.mainVisual-container img{
+.project-header-visual-container img{
     max-width: 100%;
     height: auto;
     object-fit:cover;
@@ -549,7 +570,7 @@ a.btn_01:hover {
         margin-top: 100px;
     }
     .page-container {
-        max-width: 900px;
+        max-width: 700px;
         width: 90%;
         margin: 0 auto;
     }
@@ -560,7 +581,7 @@ a.btn_01:hover {
         display: flex;
         flex-direction: column-reverse;
     }
-    .mainVisual-container {
+    .project-header-visual-container {
         width: 100%;
         height: auto;
         margin-bottom: 50px;
@@ -595,7 +616,7 @@ a.btn_01:hover {
         height: 37px;
     }
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
         width: 85%;
         text-align: center;
         max-width: 100%;
@@ -633,11 +654,11 @@ a.btn_01:hover {
             width: 90%;
             margin: 0 auto;
         }
-        .mainVisual-container{
+        .project-header-visual-container{
             width:90%;
             margin-bottom: 30px;
         }
-        .mainVisual-container img{
+        .project-header-visual-container img{
             max-width: 100%;
         }
         .contents-title{
@@ -688,42 +709,46 @@ hr{
     border-style: none;
     border-top: 1.5px solid rgb(200, 200, 200);
 }
-.mainVisual{
+.project-header-visual{
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
     margin-bottom: 50px;
 }
-.mainVisual-logo{
+.project-header-visual-logo{
     margin-right: 30px;
 }
-.mainVisual-logo img{
+.project-header-visual-logo img{
     width: 100%;
 }
-.mainVisual-mockup{
+.project-header-visual-mockup{
     margin-right: 0;
 }
-.mainVisual-mockup img{
+.project-header-visual-mockup img{
     width: 100%;
 }
-.mainVisual-2{
+.content-visual-section{
     margin-bottom: 20px;
 }
-.mainVisual-2 img{
+.content-visual-section img{
     width: 100%;
-    border: 1.5px solid #d8d8d8;
+    /*border: 1.5px solid #d8d8d8;*/
 }
-.mainVisual-image img{
+.project-sub-image-item {
+    margin-bottom: 10px;
+}
+.project-sub-image-item img {
     width: 100%;
+    height: auto;
 }
-.mainVisual-movie {
+.project-header-visual-movie {
     width: 100%;
     position: relative;
     overflow: hidden;
     padding-bottom: 56.25%;
 }
-.mainVisual-movie iframe {
+.project-header-visual-movie iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -751,8 +776,10 @@ hr{
     margin-bottom: 30px;
 }
 .work-title h1{
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
     margin-bottom: 2px;
+
 }
 .title-logo{
     display: none;
@@ -782,43 +809,43 @@ hr{
     font-size:1rem;
     color: #909090;
 }
-.inner-2{
+.project-info-section-grid{
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 46px;
 }
-.inner-2 p{
+.project-info-section-grid p{
     font-size: 1rem;
     letter-spacing: 0.05rem;
     line-height: 1.6rem;
 }
-.inner-3{
+.project-info-section-single{
     display: grid;
     grid-template-columns: 100%;
     margin-bottom: 46px;
 }
-.inner-3 p{
+.project-info-section-single p{
     font-size: 1rem;
     letter-spacing: 0.05rem;
     line-height: 1.6rem;
 }
-.detail-1{
-    margin-right: 50px;
+
+.detail-item-group {
     margin-bottom: 100px;
 }
-.detail-1 p{
+.detail-item-group.left-align {
     margin-right: 50px;
+}
+.detail-item-group p {
     color: #606060;
 }
-.detail-2 p{
-    color: #606060;
-}
-.detail-2 ul{
+.detail-item-group ul {
     text-align: left;
     padding-left: 18px;
     font-size: 1rem;
     letter-spacing: 0.05rem;
     line-height: 1.6rem;
+    color: #606060;
 }
 .bullet{
     list-style: initial;
@@ -858,6 +885,7 @@ hr{
     margin-bottom: 50px;
 }
 .caption-1 p{
+    margin-bottom: 50px;
     font-size: 1rem;
     letter-spacing: 0.05rem;
     line-height: 1.7rem;
@@ -874,12 +902,12 @@ hr{
 .caption-1 ul li{
     margin-bottom: 0.05rem;
 }
-.images-container-1 img{
+.content-full-width-image-group img{
     width: 100%;
     margin: 0.5rem 0;
     border: 1px solid #909090;
 }
-.images-container-2{
+.content-split-image-group{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -887,7 +915,7 @@ hr{
     margin: 0.5rem 0;
 }
 
-.images-container-2 img{
+.content-split-image-group img{
     width: 100%;
     border: 1px solid #909090;
 }
@@ -926,8 +954,18 @@ hr{
 Graphicのためのcss
 ===================================*/
 .contents-logo h1{
-    font-size: 30pt;
+    font-weight: bold;
+    font-size: 1.5rem;
     margin-bottom: 4pt;
+}
+
+.scaled-down-image {
+width: 80%;
+height: auto;
+}
+
+.content-image-block-1{
+    margin-bottom: 50px;
 }
 
 /*==================================================
@@ -944,21 +982,18 @@ drawingのためのcss
   }
 
 @media (max-width: 850px){
-    .mainVisual{
+    .project-header-visual{
         display: grid;
         grid-template-columns: 100%;
         margin-bottom: 30px;
     }
-    .mainVisual-logo{
+    .project-header-visual-logo{
         /* width: 30%;
         margin: 0 0 0 70%;
         margin-bottom: 30px; */
         display: none;
     }
-    .mainVisual-mockup{
-        width: 70%;
-        margin: 0 15%;
-    }
+
     .project-title{
         display: none;
     }
@@ -976,12 +1011,17 @@ drawingのためのcss
     .caption-1{
         margin-bottom: 30px;
     }
-    .inner-2{
+    .project-info-section-grid{
         display: grid;
         grid-template-columns: 100%;
         margin-bottom: 100px;
     }
-    .detail-1{
+    /* 新: detail-item-group のモバイルスタイル */
+    .detail-item-group.left-align { /* 左側にあった詳細グループのマージンを調整 */
+        margin-bottom: 30px;
+        margin-right: 0; /* モバイルではマージンをリセット */
+    }
+    .detail-item-group {
         margin-bottom: 30px;
     }
 }
