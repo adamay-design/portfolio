@@ -9,7 +9,21 @@ $(function () {
 
 });
 
+//mouse-stalker
+$(function(){
+  const mouse = $("#mouse-stalker");
+  $(document).on("mousemove",function(e){
+      const x=e.clientX;
+      const y=e.clientY;
+      mouse.css({
+          "opacity": "1",
+          "transform": "translate(" + x + "px," + y + "px)",
+      });
+  });
+});
 
+
+//bxSlider
 $(function(){
   $('.slider').bxSlider({
      auto:true,
@@ -22,7 +36,7 @@ $(function(){
   });
 });
 
-//lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
+//lightbox オプションの設定※https://lokeshdhakar.com/socialdesign/lightbox2/#options参照
 lightbox.option({
     'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
     'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
@@ -61,7 +75,7 @@ $(function () {
 
 $(function(){
 
-  // lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
+  // lightbox オプションの設定※https://lokeshdhakar.com/socialdesign/lightbox2/#options参照
   lightbox.option({
       'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
       'albumLabel': ' %1 / total %2 ',//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
