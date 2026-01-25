@@ -34,7 +34,7 @@ body{
     min-width:960px;
 	background:#ffffff;
 	font-size:1rem;
-    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    font-family: "Helvetica", "Arial", 'Noto Sans JP', sans-serif;
 }
 
 header {
@@ -83,7 +83,6 @@ nav{
 .main-menu ul{
     text-align: center;
     display: flex;
-    align-items: center;
 }
 
 .main-menu ul li {
@@ -130,7 +129,7 @@ h1,h2,h3,h4{
 h3{
     font-weight: bold;
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 @media (min-width: 960px){
@@ -480,22 +479,33 @@ projectsのためのcss
     width: 100%;
     height: auto;
 }
+
 .inner {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 120px;
+    gap: 40px;
 }
-.outline-container{
-    width: 46%;
-    margin-right: 3rem;
+
+.outline-container {
+    width: 50%;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+.project-header-visual-container {
+    width: 50%;
+    height: auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
 .contents-title{
-    width: 85%;
+    width: 100%;
     margin-bottom: 15px;
 }
 .contents-logo{
@@ -517,7 +527,7 @@ projectsのためのcss
 }
 .outline-caption{
     color: #000;
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.6rem;
     letter-spacing: 0.03rem;
     text-align: justify;
@@ -525,16 +535,14 @@ projectsのためのcss
     margin-bottom: 20px;
     color: #606060;
 }
-.project-header-visual-container{
-    width: 50%;
-    height: auto;
-}
+
 .project-header-visual-container img{
     max-width: 100%;
     height: auto;
     object-fit:cover;
     animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
     }
+
 .main-visual img{
         border: 1.5px solid #d8d8d8;
         width: 100%;
@@ -562,6 +570,7 @@ a.btn_01:hover {
   background: #000;
   color: #FFF;
 }
+
 
 @media (max-width: 1024px){
     .about {
@@ -726,6 +735,7 @@ hr{
 .project-header-visual-mockup img{
     width: 100%;
 }
+
 .content-visual-section{
     margin-bottom: 20px;
 }
@@ -761,51 +771,49 @@ hr{
     font-size: 1.6rem;
     margin-bottom: 12px;
 }
-.works-container h3{
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
+
 .works-container h4{
     font-size: 1rem;
     margin-bottom: 12px;
     color: #505050;
 }
 .work-title{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .work-title h1{
     font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 2px;
+    font-size: 2rem;
+    margin-bottom: 8px;
 
 }
+
 .title-logo{
     display: none;
 }
+
 .subtitle-1{
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
-.url-container{
+.list-container{
     padding-left: 1rem;
 }
 .url{
     list-style: initial;
 }
 .link{
-    font-size:0.9rem;
-    margin-bottom: 5px;
+    font-size:1rem;
+    margin-bottom: 50px;
     text-decoration:underline;
 }
 .link a{
     color:inherit;
 }
-.tag-container{
-    margin-bottom: 25px;
-}
+
 .tag{
     font-size:1rem;
     color: #909090;
+    margin-bottom: 15px;
 }
 .project-info-section-grid{
     display: grid;
@@ -828,31 +836,114 @@ hr{
     line-height: 1.6rem;
 }
 
-.detail-item-group {
-    margin-bottom: 100px;
+
+/* ==================================================
+   リストグループ化・インデント・番号リストのためのスタイル
+   ================================================== */
+
+/* リスト全体の余白リセット */
+ul.detail-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
-.detail-item-group.left-align {
-    margin-right: 50px;
+
+/* 各グループ（見出し＋画像＋説明）の塊 */
+li.detail-group {
+    margin-bottom: 15px; /* グループごとの下の余白 */
+    list-style: none;
 }
-.detail-item-group p {
-    color: #606060;
+
+/* 最後のグループだけ下の余白をなくす */
+li.detail-group:last-child {
+    margin-bottom: 0;
 }
-.detail-item-group ul {
-    text-align: left;
-    padding-left: 18px;
+
+/* 見出しのデザイン */
+.group-title {
     font-size: 1rem;
-    letter-spacing: 0.05rem;
+    color: #606060;
+    margin-bottom: 5px; /* 見出しと直下のコンテンツとの距離 */
+    position: relative;
+    padding-left: 1em;   /* 「・」が入る分の左余白 */
     line-height: 1.6rem;
+}
+
+/* 擬似要素で「・」を表示 */
+.group-title::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+    top: 0;
     color: #606060;
+    font-weight: bold;
 }
-.bullet{
-    list-style: initial;
-    color: #606060;
+
+/* --- サブグループ（現状調査などの細かいリスト用） --- */
+.detail-sub-group {
+    margin-bottom: 15px; /* 項目同士の間隔 */
 }
-.bullet-2{
-    list-style: initial;
-    list-style-type: circle;
+.detail-sub-group:last-child {
+    margin-bottom: 0;
 }
+
+/* --- 番号付きリスト（現状調査用） --- */
+ul.numbered-list .detail-group {
+    counter-reset: num-counter;
+}
+ul.numbered-list .detail-sub-group .group-title::before {
+    counter-increment: num-counter;      
+    content: counter(num-counter) ".";
+    font-weight: bold;
+}
+
+/* ==================================================
+タイトルは左のまま、中身（文章・画像）だけ右にずらす設定
+   ================================================== */
+
+/* 1. まず、リスト全体の外枠のズレはリセット（左端に揃える） */
+.indent-content-block .list-container {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* 2. リストグループ内の「p（文章）」と「画像エリア」だけに左余白を与える */
+.indent-content-block .detail-group p,
+.indent-content-block .detail-sub-group p,
+.indent-content-block .detail-group div[class*="image-group"],
+.indent-content-block .detail-sub-group div[class*="image-group"] {
+    margin-left: 1rem;       /* ★ここで文章の開始位置を右にずらす */
+    box-sizing: border-box;
+}
+
+
+/* === スマホ表示時の調整 === */
+@media (max-width: 850px) {
+    .indent-content-block .detail-group p,
+    .indent-content-block .detail-sub-group p,
+    .indent-content-block .detail-group div[class*="image-group"],
+    .indent-content-block .detail-sub-group div[class*="image-group"] {
+        margin-left: 0.5rem; /* スマホでは余白を少し小さく */
+    }
+}
+
+/* ==================================================
+   入れ子リスト（YouTubeなど）用のインデント設定
+   ================================================== */
+
+/* 親項目（投稿テンプレートなど）の下に配置するリスト全体を右にずらす */
+.indent-content-block .nested-list {
+    margin-left: 1rem;
+}
+
+/* スマホ表示時の調整 */
+@media (max-width: 850px) {
+    .indent-content-block .nested-list {
+        margin-left: 0.5rem;
+    }
+}
+
+
 .grid-container{
     width: 100%;
 	display: flex;
@@ -880,41 +971,57 @@ hr{
     border: 1.5px solid #d8d8d8;
 }
 
+.detail-item-group{
+    margin-bottom: 0px;
+}
 
 .caption-1{
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
+
 .caption-1 p{
-    margin-bottom: 50px;
     font-size: 1rem;
-    letter-spacing: 0.05rem;
-    line-height: 1.7rem;
+    letter-spacing: 0.1rem;
+    line-height: 175%;
     color: #606060;
-}
-.caption-1 ul{
-    text-align: left;
-    padding-left: 18px;
-    font-size: 1rem;
-    letter-spacing: 0.05rem;
-    line-height: 1.6rem;
-    color: #505050;
-}
-.caption-1 ul li{
-    margin-bottom: 0.05rem;
+    font-feature-settings: "palt";
+    text-align: justify;
+    margin-bottom: 0.75em;
 }
 
+.caption-1 p:last-child {
+    margin-bottom: 0;
+}
 
+.caption-1 .reference {
+    text-align: right;
+    font-size: 0.7rem;
+    margin-top: -0.5em;
+    margin-bottom: 1.75em;
+}
+
+.project-info-section-grid{
+    margin-bottom: 100px;
+}
 
 .caption-2{
     margin-bottom: 100px;
 }
+
 .caption-2 p{
-    margin-bottom: 50px;
     font-size: 1rem;
-    letter-spacing: 0.05rem;
-    line-height: 1.7rem;
+    letter-spacing: 0.1rem;
+    line-height: 175%;
     color: #606060;
+    font-feature-settings: "palt";
+    text-align: justify;
 }
+
+.caption-2 br{
+    margin-bottom: 10px;
+}
+
+
 .caption-2 ul{
     text-align: left;
     padding-left: 18px;
@@ -923,11 +1030,32 @@ hr{
     line-height: 1.6rem;
     color: #505050;
 }
-.caption-2 ul li{
+.caption-2  li{
     margin-bottom: 0.05rem;
 }
 
 
+.caption-3{
+    margin-bottom: 100px;
+}
+.caption-3 p{
+    margin-bottom: 50px;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 175%;
+    color: #606060;
+}
+.caption-3 {
+    text-align: left;
+    padding-left: 18px;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.6rem;
+    color: #505050;
+}
+.caption-3  li{
+    margin-bottom: 0.05rem;
+}
 
 .content-full-width-image-group img{
     width: 100%;
@@ -971,7 +1099,7 @@ hr{
 .subtitle-1{
     font-size: 0.9rem;
 }
-.url-container{
+.list-container{
     padding-left: 0rem;
 }
 }
@@ -987,7 +1115,7 @@ Graphicのためのcss
 }
 
 .scaled-down-image {
-width: 80%;
+width: 85%;
 height: auto;
 }
 
@@ -1021,15 +1149,18 @@ drawingのためのcss
         display: none;
     }
 
-    .project-title{
+   /* .project-title{
         display: none;
-    }
+    }*/
+
     .title-logo{
         width: 100%;
         height: auto;
         margin-bottom: 5px;
         display: block;
+        display: none;
     }
+    
     .title-logo img{
         width: auto;
         height: 28px;
@@ -1457,7 +1588,7 @@ header {
     background-image: linear-gradient(46deg, rgba(0, 60, 20, 0.9), rgba(0, 64, 90, 0.9));
 }
 
-.hamburger-list ul li {
+.hamburger-list  li {
 	text-align: center;
 	height: 50px; /*メニューの高さ*/
 }
@@ -1466,7 +1597,7 @@ nav.hamburger-list{
 	justify-content: center;
 }
 
-.hamburger-list ul li a {
+.hamburger-list  li a {
 	height:0px;
     margin-left:0px;
     color:#FFF;
@@ -1479,7 +1610,7 @@ nav.hamburger-list{
     padding-top: 3px;
 }
 
-ul {
+ {
     flex-direction: column;
     text-align: center;
 }
