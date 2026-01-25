@@ -1579,7 +1579,7 @@ header {
 
 .hamburger-list {
     z-index: 19;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica", "Arial", 'Noto Sans JP', sans-serif;
     font-size: 1.1rem;
     top: 55px;
     position: absolute;
@@ -1639,7 +1639,7 @@ nav.hamburger-list{
   
   .wrapper p {
     color: #000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica", "Arial", 'Noto Sans JP', sans-serif;
     font-size: 12px;
     margin: 0; /* デフォルトの余白を除去 */
   }
