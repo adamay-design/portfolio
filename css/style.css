@@ -306,14 +306,14 @@ aboutのためのcss
 }
 
 .about-main-visual {
-    width: 100%; /* 親要素 (about-contents) と同じ幅にする */
-    margin-bottom: 40px; /* 必要に応じて、画像の下にマージンを追加 */
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 .about-main-visual img {
-    width: 100%; /* 画像自身をラッパーの100%にする */
-    height: auto; /* 縦横比を維持 */
-    display: block; /* 余分なスペースを防ぐ */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .page-container{
@@ -353,7 +353,7 @@ aboutのためのcss
     font-size: 1rem;
     display: flex;
     align-items: center;
-    margin-left: 10px; /* 適宜調整 */
+    margin-left: 10px;
     line-height: 2.3rem;
 }
 .category{
