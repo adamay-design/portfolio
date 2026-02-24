@@ -314,7 +314,6 @@ aboutのためのcss
     width: 100%; /* 画像自身をラッパーの100%にする */
     height: auto; /* 縦横比を維持 */
     display: block; /* 余分なスペースを防ぐ */
-    border: 1.5px solid #d8d8d8; /* main-visual img からボーダーを継承 */
 }
 
 .page-container{
